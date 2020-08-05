@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1 Welcome to #{title}
+  if registrations.length
+    table.listing-table.table-dark.table-striped
+      tr
+        th Name
+      each registration in registrations
+        tr
+          td= registration.name
+  else
+    p No registrations yet :(  h1= title
